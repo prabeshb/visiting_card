@@ -77,18 +77,24 @@ class MyApp extends StatelessWidget {
                     ),
                   ),
                 )),
-            Card(
-              semanticContainer: true,
-              clipBehavior: Clip.antiAliasWithSaveLayer,
-              child: Image.asset(
-                'images/prabesh_qrcode.jpg',
-                fit: BoxFit.fill,
+            ExpansionTile(
+              leading: Icon(
+                Icons.account_box_outlined,
+                color: Colors.black,
               ),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10.0),
+              trailing: Icon(
+                Icons.arrow_drop_down_circle_outlined,
+                color: Colors.black,
               ),
-              elevation: 5,
-              margin: EdgeInsets.all(10),
+              title: Text(
+                "LinkedIn",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontFamily: 'SourceSansProd',
+                  fontSize: 20.0,
+                ),
+              ),
+              children: [Text("https://www.linkedin.com/in/prabeshb/")],
             ),
           ],
         )),
